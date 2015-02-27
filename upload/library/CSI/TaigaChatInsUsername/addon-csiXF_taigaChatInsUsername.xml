@@ -28,7 +28,7 @@
   <public_template_modifications>
     <modification template="dark_taigachat_message" modification_key="csiXF_taigaChatInsUser" description="Добавление функции вставки имени пользователя в шаблон &quot;dark_taigachat_message&quot;" execution_order="99999999" enabled="1" action="str_replace">
       <find><![CDATA[<a {xen:if $message.user_id, 'href="{xen:link members, $message}" '}class="username" itemprop="name"><xen:if is="{$message.usernameHtml}">{xen:raw $message.usernameHtml}<xen:else />{xen:helper richUserName, $message}</xen:if></a><xen:if is="!{$message.me} && !{$message.activity}">:</xen:if>]]></find>
-      <replace><![CDATA[<a {xen:if $message.user_id, 'title="{$message.username}" href="{xen:link members, $message}" '}class="dark_chat taigachat_msg_user username" itemprop="name"><xen:if is="{$message.usernameHtml}">{xen:raw $message.usernameHtml}<xen:else />{xen:helper richUserName, $message}</xen:if></a><xen:if is="!{$message.me} && !{$message.activity}">:</xen:if>]]></replace>
+      <replace><![CDATA[<a {xen:if $message.user_id, 'title="{$message.username}" href="{xen:link members, $message}" '}class="dark_chat taigachat_msg_user" itemprop="name"><xen:if is="{$message.usernameHtml}">{xen:raw $message.usernameHtml}<xen:else /><span class="username">{xen:helper richUserName, $message}</span></xen:if></a><xen:if is="!{$message.me} && !{$message.activity}">:</xen:if>]]></replace>
     </modification>
   </public_template_modifications>
   <bb_code_media_sites/>
